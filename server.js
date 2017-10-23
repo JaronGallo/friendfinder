@@ -6,7 +6,7 @@ var friends = require("./app/data/friends.js");
 var path = require("path");
 
 var app = express();
-var PORT = 8080;
+var port = process.env.PORT || 3000;
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -42,4 +42,4 @@ app.post("/api/friends/new", function(req, res) {
 });
 
 
-app.listen(PORT);
+app.listen(port, function() {});
